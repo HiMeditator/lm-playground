@@ -1,0 +1,13 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+Qwen3-TTS-12Hz-1.7B-Base
+qwen3-tts/*.wav

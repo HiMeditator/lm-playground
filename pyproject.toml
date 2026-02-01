@@ -1,7 +1,7 @@
 [project]
 name = "lm-playground"
 version = "0.1.0"
-description = "Add your description here"
+description = "Test and play with LMs"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -12,6 +12,12 @@ dependencies = [
     "flash-attn",
     "ipykernel>=7.1.0",
     "ipywidgets>=8.1.8",
+    "pydantic-ai>=1.51.0",
+]
+
+[tool.uv.workspace]
+members = [
+    "aicmd"
 ]
 
 [[tool.uv.index]]

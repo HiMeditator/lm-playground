@@ -1,0 +1,16 @@
+[project]
+name = "aicmd"
+version = "0.1.0"
+description = "Use natural language to let AI generate terminal commands"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic-ai>=1.51.0",
+]
+
+[project.scripts]
+aicmd = "pydantic_aicmd:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

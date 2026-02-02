@@ -18,4 +18,5 @@ build-backend = "hatchling.build"
 packages = [
     "src/atri-mcp",
     "src/mcp-logger",
+    "src/llm-logger"
 ]

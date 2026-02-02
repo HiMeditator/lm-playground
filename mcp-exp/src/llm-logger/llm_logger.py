@@ -7,6 +7,7 @@ from datetime import datetime
 from fastapi import FastAPI, Request
 from starlette.responses import StreamingResponse
 
+LLM_SERVICE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
 
 class AppLogger:
     def __init__(self, log_file):
@@ -54,7 +55,7 @@ async def proxy_request(request: Request):
         async with httpx.AsyncClient(timeout=None) as client:
             async with client.stream(
                     "POST",
-                    "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+                    LLM_SERVICE_URL,
                     json=body,
                     headers={
                         "Content-Type": "application/json",

@@ -1,0 +1,306 @@
+[INPUT] {
+    "method": "initialize",
+    "params": {
+        "protocolVersion": "2025-11-25",
+        "capabilities": {},
+        "clientInfo": {
+            "name": "Cline",
+            "version": "3.56.2"
+        }
+    },
+    "jsonrpc": "2.0",
+    "id": 0
+}
+[INPUT] {
+    "method": "initialize",
+    "params": {
+        "protocolVersion": "2025-11-25",
+        "capabilities": {},
+        "clientInfo": {
+            "name": "Cline",
+            "version": "3.56.2"
+        }
+    },
+    "jsonrpc": "2.0",
+    "id": 0
+}
+[OUTPUT] {
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": {
+        "protocolVersion": "2025-11-25",
+        "capabilities": {
+            "experimental": {},
+            "prompts": {
+                "listChanged": false
+            },
+            "resources": {
+                "subscribe": false,
+                "listChanged": false
+            },
+            "tools": {
+                "listChanged": false
+            }
+        },
+        "serverInfo": {
+            "name": "atri-mcp",
+            "version": "1.26.0"
+        }
+    }
+}
+[INPUT] {
+    "method": "notifications/initialized",
+    "jsonrpc": "2.0"
+}
+[INPUT] {
+    "method": "tools/list",
+    "jsonrpc": "2.0",
+    "id": 1
+}
+[OUTPUT] {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "tools": [
+            {
+                "name": "get_atri_greet",
+                "description": "Greet in the persona of Atri (Chinese: 亚托莉, Japanese: アトリ).\n    Args:\n        name: The name of the person to greet. If the user does not specify a name, pass an empty string.\n        lang: Language code for the language to greet in.\n    ",
+                "inputSchema": {
+                    "properties": {
+                        "name": {
+                            "title": "Name",
+                            "type": "string"
+                        },
+                        "lang": {
+                            "default": "en",
+                            "enum": [
+                                "zh",
+                                "en",
+                                "ja"
+                            ],
+                            "title": "Lang",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "name"
+                    ],
+                    "title": "get_atri_greetArguments",
+                    "type": "object"
+                },
+                "outputSchema": {
+                    "properties": {
+                        "result": {
+                            "title": "Result",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "result"
+                    ],
+                    "title": "get_atri_greetOutput",
+                    "type": "object"
+                }
+            },
+            {
+                "name": "get_atri_info",
+                "description": "Get information about Atri (Chinese: 亚托莉, Japanese: アトリ).\n    ",
+                "inputSchema": {
+                    "properties": {},
+                    "title": "get_atri_infoArguments",
+                    "type": "object"
+                },
+                "outputSchema": {
+                    "properties": {
+                        "result": {
+                            "title": "Result",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "result"
+                    ],
+                    "title": "get_atri_infoOutput",
+                    "type": "object"
+                }
+            }
+        ]
+    }
+}
+[INPUT] {
+    "method": "resources/list",
+    "jsonrpc": "2.0",
+    "id": 2
+}
+[OUTPUT] {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "result": {
+        "resources": []
+    }
+}
+[INPUT] {
+    "method": "resources/templates/list",
+    "jsonrpc": "2.0",
+    "id": 3
+}
+[OUTPUT] {
+    "jsonrpc": "2.0",
+    "id": 3,
+    "result": {
+        "resourceTemplates": []
+    }
+}
+[INPUT] {
+    "method": "prompts/list",
+    "jsonrpc": "2.0",
+    "id": 4
+}
+[OUTPUT] {
+    "jsonrpc": "2.0",
+    "id": 0,
+    "result": {
+        "protocolVersion": "2025-11-25",
+        "capabilities": {
+            "experimental": {},
+            "prompts": {
+                "listChanged": false
+            },
+            "resources": {
+                "subscribe": false,
+                "listChanged": false
+            },
+            "tools": {
+                "listChanged": false
+            }
+        },
+        "serverInfo": {
+            "name": "atri-mcp",
+            "version": "1.26.0"
+        }
+    }
+}
+[INPUT] {
+    "method": "notifications/initialized",
+    "jsonrpc": "2.0"
+}
+[INPUT] {
+    "method": "tools/list",
+    "jsonrpc": "2.0",
+    "id": 1
+}
+[OUTPUT] {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "tools": [
+            {
+                "name": "get_atri_greet",
+                "description": "Greet in the persona of Atri (Chinese: 亚托莉, Japanese: アトリ).\n    Args:\n        name: The name of the person to greet. If the user does not specify a name, pass an empty string.\n        lang: Language code for the language to greet in.\n    ",
+                "inputSchema": {
+                    "properties": {
+                        "name": {
+                            "title": "Name",
+                            "type": "string"
+                        },
+                        "lang": {
+                            "default": "en",
+                            "enum": [
+                                "zh",
+                                "en",
+                                "ja"
+                            ],
+                            "title": "Lang",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "name"
+                    ],
+                    "title": "get_atri_greetArguments",
+                    "type": "object"
+                },
+                "outputSchema": {
+                    "properties": {
+                        "result": {
+                            "title": "Result",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "result"
+                    ],
+                    "title": "get_atri_greetOutput",
+                    "type": "object"
+                }
+            },
+            {
+                "name": "get_atri_info",
+                "description": "Get information about Atri (Chinese: 亚托莉, Japanese: アトリ).\n    ",
+                "inputSchema": {
+                    "properties": {},
+                    "title": "get_atri_infoArguments",
+                    "type": "object"
+                },
+                "outputSchema": {
+                    "properties": {
+                        "result": {
+                            "title": "Result",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "result"
+                    ],
+                    "title": "get_atri_infoOutput",
+                    "type": "object"
+                }
+            }
+        ]
+    }
+}
+[INPUT] {
+    "method": "resources/list",
+    "jsonrpc": "2.0",
+    "id": 2
+}
+[OUTPUT] {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "result": {
+        "resources": []
+    }
+}
+[INPUT] {
+    "method": "resources/templates/list",
+    "jsonrpc": "2.0",
+    "id": 3
+}
+[OUTPUT] {
+    "jsonrpc": "2.0",
+    "id": 3,
+    "result": {
+        "resourceTemplates": []
+    }
+}
+[INPUT] {
+    "method": "prompts/list",
+    "jsonrpc": "2.0",
+    "id": 4
+}
+[OUTPUT] {
+    "jsonrpc": "2.0",
+    "id": 4,
+    "result": {
+        "prompts": []
+    }
+}
+--- STDIN stream closed to target ---
+[OUTPUT] {
+    "jsonrpc": "2.0",
+    "id": 4,
+    "result": {
+        "prompts": []
+    }
+}
+--- STDIN stream closed to target ---

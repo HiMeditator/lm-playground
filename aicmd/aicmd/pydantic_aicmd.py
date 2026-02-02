@@ -51,7 +51,7 @@ def think(s: str) -> bool:
     Returns:
         bool: Whether the thought information has been conveyed to the user
     """
-    print(f"{Fore.CYAN}(AI Thinking): {s}{Style.RESET_ALL}\n")
+    print(f"{Fore.CYAN}(AI Thinking): {s}{Style.RESET_ALL}")
     return True
 
 
@@ -88,6 +88,7 @@ def main() -> None:
                 subprocess.run(result.cmd, shell=True)
         else:
             print(f"{Fore.RED}(AI Answer): {result.failure or 'Generation failed without reason.'}{Style.RESET_ALL}")
+        # print(f"\n{Fore.MAGENTA}{resp.usage()}{Style.RESET_ALL}")
     except Exception as e:
         print(f"{Fore.RED}Error during execution: {e}{Style.RESET_ALL}")
         sys.exit(1)
@@ -95,4 +96,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-    print(f"{Fore.MAGENTA}Execution completed.{Style.RESET_ALL}")

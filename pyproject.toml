@@ -1,5 +1,5 @@
 [project]
-name = "lm-playground"
+name = "lm_playground"
 version = "0.1.0"
 description = "Test and play with LMs"
 readme = "README.md"
@@ -13,11 +13,15 @@ dependencies = [
     "ipykernel>=7.1.0",
     "ipywidgets>=8.1.8",
     "pydantic-ai>=1.51.0",
+    "flat-example",
+    "src-example",
 ]
 
 [tool.uv.workspace]
 members = [
-    "aicmd"
+    "aicmd",
+    "pkg-exp/flat-layout",
+    "pkg-exp/src-layout",
 ]
 
 [[tool.uv.index]]
@@ -30,3 +34,5 @@ torch = { index = "pytorch-cu128" }
 torchvision = { index = "pytorch-cu128" }
 torchaudio = { index = "pytorch-cu128" }
 flash-attn = { url = "https://github.com/kingbri1/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu128torch2.9.0cxx11abiFALSE-cp312-cp312-win_amd64.whl" }
+flat-example = { workspace = true, editable = true }
+src-example = { workspace = true, editable = true }

@@ -12,4 +12,5 @@ aicmd NATURAL_LANGUAGE_REQUEST
 
 ```bash
 aicmd 列出当前所在的目录
+aicmd List all files in the current directory
 ```

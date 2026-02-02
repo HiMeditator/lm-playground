@@ -19,7 +19,9 @@ resolution-markers = [
 [manifest]
 members = [
     "aicmd",
+    "flat-example",
     "lm-playground",
+    "src-example",
 ]
 
 [[package]]
@@ -54,7 +56,7 @@ wheels = [
 
 [[package]]
 name = "aicmd"
-version = "0.1.0"
+version = "0.2.0"
 source = { editable = "aicmd" }
 dependencies = [
     { name = "pydantic-ai" },
@@ -952,6 +954,17 @@ requires-dist = [
 ]
 
 [[package]]
+name = "flat-example"
+version = "0.1.0"
+source = { editable = "pkg-exp/flat-layout" }
+dependencies = [
+    { name = "plotext" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "plotext", specifier = ">=5.3.2" }]
+
+[[package]]
 name = "flatbuffers"
 version = "25.12.19"
 source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
@@ -1793,10 +1806,12 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "flash-attn", marker = "python_full_version < '3.13'" },
+    { name = "flat-example" },
     { name = "ipykernel" },
     { name = "ipywidgets" },
     { name = "pydantic-ai" },
     { name = "qwen-tts" },
+    { name = "src-example" },
     { name = "torch" },
     { name = "torchaudio", version = "2.9.0", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "python_full_version < '3.15' and platform_machine == 'aarch64' and platform_python_implementation == 'CPython' and sys_platform == 'linux'" },
     { name = "torchaudio", version = "2.9.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "python_full_version >= '3.15' or platform_machine != 'aarch64' or platform_python_implementation != 'CPython' or sys_platform != 'linux'" },
@@ -1807,10 +1822,12 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "flash-attn", url = "https://github.com/kingbri1/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu128torch2.9.0cxx11abiFALSE-cp312-cp312-win_amd64.whl" },
+    { name = "flat-example", editable = "pkg-exp/flat-layout" },
     { name = "ipykernel", specifier = ">=7.1.0" },
     { name = "ipywidgets", specifier = ">=8.1.8" },
     { name = "pydantic-ai", specifier = ">=1.51.0" },
     { name = "qwen-tts", specifier = ">=0.0.5" },
+    { name = "src-example", editable = "pkg-exp/src-layout" },
     { name = "torch", specifier = "==2.9.0", index = "https://download.pytorch.org/whl/cu128" },
     { name = "torchaudio", specifier = "==2.9.0", index = "https://download.pytorch.org/whl/cu128" },
     { name = "torchvision", specifier = "==0.24.0", index = "https://download.pytorch.org/whl/cu128" },
@@ -2889,6 +2906,15 @@ source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
 sdist = { url = "https://pypi.tuna.tsinghua.edu.cn/packages/cf/86/0248f086a84f01b37aaec0fa567b397df1a119f73c16f6c7a9aac73ea309/platformdirs-4.5.1.tar.gz", hash = "sha256:61d5cdcc6065745cdd94f0f878977f8de9437be93de97c1c12f853c9c0cdcbda", size = 21715, upload-time = "2025-12-05T13:52:58.638Z" }
 wheels = [
     { url = "https://pypi.tuna.tsinghua.edu.cn/packages/cb/28/3bfe2fa5a7b9c46fe7e13c97bda14c895fb10fa2ebf1d0abb90e0cea7ee1/platformdirs-4.5.1-py3-none-any.whl", hash = "sha256:d03afa3963c806a9bed9d5125c8f4cb2fdaf74a55ab60e5d59b3fde758104d31", size = 18731, upload-time = "2025-12-05T13:52:56.823Z" },
+]
+
+[[package]]
+name = "plotext"
+version = "5.3.2"
+source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
+sdist = { url = "https://pypi.tuna.tsinghua.edu.cn/packages/c9/d7/f75f397af966fe252d0d34ffd3cae765317fce2134f925f95e7d6725d1ce/plotext-5.3.2.tar.gz", hash = "sha256:52d1e932e67c177bf357a3f0fe6ce14d1a96f7f7d5679d7b455b929df517068e", size = 61967, upload-time = "2024-09-24T15:13:37.728Z" }
+wheels = [
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/f6/1e/12fe7c40cd2099a1f454518754ed229b01beaf3bbb343127f0cc13ce6c22/plotext-5.3.2-py3-none-any.whl", hash = "sha256:394362349c1ddbf319548cfac17ca65e6d5dfc03200c40dfdc0503b3e95a2283", size = 64047, upload-time = "2024-09-24T15:13:36.296Z" },
 ]
 
 [[package]]
@@ -4142,6 +4168,17 @@ wheels = [
     { url = "https://pypi.tuna.tsinghua.edu.cn/packages/64/59/2430a48c705565eb09e78346950b586f253a11bd5313426ced3ecd9b0feb/soxr-1.0.0-cp314-cp314t-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:38b35c99e408b8f440c9376a5e1dd48014857cd977c117bdaa4304865ae0edd0", size = 243025, upload-time = "2025-09-07T13:22:12.877Z" },
     { url = "https://pypi.tuna.tsinghua.edu.cn/packages/3c/1b/f84a2570a74094e921bbad5450b2a22a85d58585916e131d9b98029c3e69/soxr-1.0.0-cp314-cp314t-win_amd64.whl", hash = "sha256:a39b519acca2364aa726b24a6fd55acf29e4c8909102e0b858c23013c38328e5", size = 184850, upload-time = "2025-09-07T13:22:14.068Z" },
 ]
+
+[[package]]
+name = "src-example"
+version = "0.1.0"
+source = { editable = "pkg-exp/src-layout" }
+dependencies = [
+    { name = "tqdm" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "tqdm", specifier = ">=4.67.2" }]
 
 [[package]]
 name = "sse-starlette"

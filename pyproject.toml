@@ -22,6 +22,7 @@ members = [
     "aicmd",
     "pkg-exp/flat-layout",
     "pkg-exp/src-layout",
+    "mcp-exp"
 ]
 
 [[tool.uv.index]]

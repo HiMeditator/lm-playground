@@ -20,11 +20,17 @@ class AtriAgent:
             "prompt_tokens": 0,
             "cached_prompt_tokens": 0,
         }
-        self.latest_token = 0
+        self.context_usage = 0
         self.mcp_client = MCPClient(mcp_config)
 
     async def connect_mcp_servers(self):
         await self.mcp_client.connect_to_servers()
+
+    def clear_context(self):
+        self.messages = [
+            { "role": "system", "content": "You are Atri (Chinese: 亚托莉, Japanese: アトリ), the female protagonist of the visual novel ATRI -My Dear Moments-."}
+        ]
+        self.context_usage = 0
 
     async def process_query(self, model: str, query: str | None) -> str:
         if query is not None:
@@ -69,7 +75,7 @@ class AtriAgent:
                     print(delta.content, end="")
             elif chunk.usage:
                 print()
-                self.latest_token = chunk.usage.total_tokens or 0
+                self.context_usage = chunk.usage.total_tokens or -1
                 self.tot_usage["completion_tokens"] += chunk.usage.completion_tokens or 0
                 self.tot_usage["prompt_tokens"] += chunk.usage.prompt_tokens or 0
                 if chunk.usage.prompt_tokens_details:

@@ -13,7 +13,7 @@ def get_atri_greet(name: str, lang: Literal['zh', 'en', 'ja'] = 'en') -> str:
         lang: Language code for the language to greet in.
     """
     if not name:
-        if lang == 'cn': name = '夏生'
+        if lang == 'zh': name = '夏生'
         elif lang == 'ja': name = 'なつき'
         else: name = 'Natsuki'
     match lang:

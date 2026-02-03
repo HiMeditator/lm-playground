@@ -8,6 +8,14 @@ modelscope download --model Qwen/Qwen3-TTS-12Hz-1.7B-Base --local_dir ./Qwen3-TT
 
 ## plays
 
+### agent-exp
+
+一个简单的聊天 Agent，使用了 MCP 和 Function Calling 
+
+```bash
+uv run ./agent-exp/src/main.py
+```
+
 ### aicmd
 
 使用自然语言让 AI 生成和执行终端命令

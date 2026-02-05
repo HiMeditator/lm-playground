@@ -1,12 +1,13 @@
 import asyncio
 import os
 import json
-from agent import AtriAgent
+from src.agent import AtriAgent
 from colorama import Fore, Style, init
 
 init(autoreset=True)
 
 async def main():
+    print("Starting ATRI Chat Agent...")
     client = AtriAgent(
         base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
         api_key=os.getenv("DASHSCOPE_API_KEY") or "",

@@ -13,7 +13,7 @@ modelscope download --model Qwen/Qwen3-TTS-12Hz-1.7B-Base --local_dir ./Qwen3-TT
 一个简单的聊天 Agent，使用了 MCP 和 Function Calling 
 
 ```bash
-uv run ./agent-exp/src/main.py
+uv run ./agent-exp/main.py
 ```
 
 ### aicmd

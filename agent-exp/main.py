@@ -35,7 +35,7 @@ async def main():
     try:
         await client.connect_mcp_servers()
         while True:
-            print(f"{Fore.GREEN}========== ATRI Chat Agent v0.1.0 ==========")
+            print(f"\n{Fore.GREEN}========== ATRI Chat Agent v0.1.0 ==========")
             print(f"{Fore.GREEN}\tUse 'exit' or 'quit' to exit.")
             print(f"{Fore.GREEN}\tUse 'log' to print chat log.")
             print(f"{Fore.GREEN}\tUse 'usage' to show token usage.")
@@ -57,7 +57,7 @@ async def main():
                 client.clear_context()
                 print("Context reset.")
                 continue
-            await client.process_query("qwen-plus", query)
+            await client.process_query("dashscope/qwen-plus", query)
     finally:
         await client.cleanup()
 
